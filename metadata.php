@@ -1,8 +1,8 @@
 <?php
 
-    $url = "https://clinic.com.my";
+    $site_url = "https://clinic.com.my";
     $site_name = "Clinic Dashboard";
 
-    $home_page = "/";
+    $home_page_url = "/";
 
 ?>
