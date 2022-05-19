@@ -23,6 +23,7 @@
             $this->min_length = $min_length;
             $this->max_length = $max_length;
 
+            // If input is required
             if ($required)
             {
                 $this->error = $this->required();
@@ -34,15 +35,18 @@
                 
             }
       
+            // If input follow min and max length
             $this->error = $this->min_max_length();
             if(!empty($this->error))
             {
                 return $this->error;
             }
 
+            // If input is email
             if ($email)
             {
                 $this->error = $this->email();
+
                 if(!empty($this->error))
                 {
                     return $this->error;
