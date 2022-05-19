@@ -7,6 +7,8 @@
 
         private $input  = "", $keyword = "", $min_length = "", $max_length = "";
 
+        private $error;
+
         // Class constructor
         public function __construct()
         {
@@ -23,15 +25,28 @@
 
             if ($required)
             {
-                return $this->required();
+                $this->error = $this->required();
+
+                if(!empty($this->error))
+                {
+                    return $this->error;
+                }
+                
             }
-            else if ($min_length != 3 || $max_length != 12)
+      
+            $this->error = $this->min_max_length();
+            if(!empty($this->error))
             {
-                return $this->min_max_length();
+                return $this->error;
             }
-            else if ($email)
+
+            if ($email)
             {
-                return $this->email();
+                $this->error = $this->email();
+                if(!empty($this->error))
+                {
+                    return $this->error;
+                }
             }
         }
 
@@ -72,6 +87,6 @@
 
     }
 
-    // $validation = new Validation();
+    $validation = new Validation();
 
 ?>
