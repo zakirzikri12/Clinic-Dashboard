@@ -1,4 +1,3 @@
-!
 <!DOCTYPE html>
 <html lang="en">
 
@@ -140,6 +139,37 @@
                         <h3 class="text-dark mb-0">Add Appointment</h3>
                     </div>
                 </div>
+                <form class="bootstrap-form-with-validation" style="margin-left: 22px;margin-right: 17px;">
+                    <h2 class="text-center"></h2>
+                    <div class="form-group mb-3"><label class="form-label" for="full-name">Full Name</label><input class="form-control" type="text" id="text-input" name="full-name" placeholder="Enter Full Name"></div>
+                    <div class="form-group mb-3"><label class="form-label" for="ic-number">NRIC Number</label><input class="form-control" type="password" id="password-input-5" name="IC-number" placeholder="Enter IC No."></div>
+                    <div class="form-group mb-3"><label class="form-label" for="age">Age</label><input class="form-control" type="password" id="password-input" name="age" placeholder="Enter age"></div>
+                    <div class="form-group mb-3"><label class="form-label" for="gender">Gender</label><input class="form-control" type="password" id="password-input-2" name="gender" placeholder="Enter gender"></div>
+                    <div class="form-group mb-3"><label class="form-label" for="address">Address</label><textarea class="form-control" id="textarea-input" name="address" placeholder="Add address"></textarea></div>
+                    <div class="form-group mb-3"><label class="form-label" for="email">Email</label><input class="form-control" type="password" id="password-input-4" name="email" placeholder="Enter email"></div>
+                    <div class="form-group mb-3"><label class="form-label" for="phone-no">Phone No.</label><input class="form-control" type="password" id="password-input-3" name="phone-no" placeholder="Enter Phone No."></div>
+                    <div class="form-group mb-3"><label class="form-label" for="appointment-date">Appointment Date</label><input class="form-control" style="font-family:Roboto, sans-serif;" name="date" type="date"></div>
+                    <div class="form-group mb-3"><label class="form-label" for="appointment-session">Appointments Sessions</label><select class="form-select" id="calltime-3" name="Call Time">
+                            <option value="Morning" selected="">Morning</option>
+                            <option value="Evening">Evening</option>
+                            <option value="Night">Night</option>
+                        </select></div>
+                    <div class="form-group mb-3"><label class="form-label" for="remark">Remark</label><textarea class="form-control" id="textarea-input-1" name="remark" placeholder="remark"></textarea></div>
+                    <div class="form-group mb-3"><button class="btn btn-primary" type="submit" data-bs-target="#modal-1" data-bs-toggle="modal">Subimt</button></div>
+                </form>
+                <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Confirmation of new appointment</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Confirm to crate new appointment&nbsp;</p>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Yes</button></div>
+                        </div>
+                    </div>
+                </div>
                 <div class="container">
                     <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
                         <div class="modal-dialog modal-lg" role="document">
@@ -217,49 +247,12 @@
                                 <div id="successfail"></div>
                             </div>
                         </div>
-                        <div class="row justify-content-start align-items-center" style="width: 1336px;margin-left: -13px;">
-                            <div class="col-md-6" id="message" style="width: 1013.5px;">
-                                <fieldset>
-                                    <legend></legend>
-                                </fieldset>
-                                <div class="flex-fill has-feedback form-group mb-3"><label class="form-label" for="from_name">Name</label><input class="form-control" type="text" id="from_name" tabindex="-1" name="from_name" required="" placeholder="Search Name"></div>
-                                <div class="flex-fill has-feedback form-group mb-3"><label class="form-label" for="from_email">NRIC Number</label><input class="form-control" type="email" id="from_email" name="from_email" required="" placeholder="Search IC Number"></div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="has-feedback form-group mb-3"><label class="form-label" for="from_phone">Appointment Date - opt</label><input class="form-control" style="font-family:Roboto, sans-serif;" name="birthDate" type="date"></div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group mb-3"><label class="form-label" for="calltime">Appointment Session - opt</label><select class="form-select" id="calltime-1" name="Call Time">
-                                                <option value="Morning" selected="">Morning</option>
-                                                <option value="Evening">Evening</option>
-                                                <option value="Night">Night</option>
-                                            </select></div>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-3"><label class="form-label" for="comments">Remarks</label><textarea class="form-control" id="comments-1" name="Comments" placeholder="Enter here" rows="5"></textarea></div>
-                                <div class="form-group mb-3"><button class="btn btn-primary d-block w-100" type="submit" data-bs-target="#modal-2" data-bs-toggle="modal">Submit&nbsp;<i class="fa fa-chevron-circle-right"></i></button>
-                                    <div class="modal fade" role="dialog" tabindex="-1" id="modal-2">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title">Modal Title</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>The content of your modal.</p>
-                                                </div>
-                                                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                            </div>
-                        </div>
                     </form>
                 </div>
                 <div class="container">
                     <div></div>
                 </div>
+                <div class="card shadow"></div>
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
